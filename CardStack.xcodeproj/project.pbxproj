@@ -13,6 +13,11 @@
 		3811924E1E73B5CA00D799E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3811924D1E73B5CA00D799E4 /* Assets.xcassets */; };
 		381192511E73B5CA00D799E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3811924F1E73B5CA00D799E4 /* LaunchScreen.storyboard */; };
 		3811925C1E73B5CA00D799E4 /* CardStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3811925B1E73B5CA00D799E4 /* CardStackTests.swift */; };
+		381192671E73B6C300D799E4 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381192661E73B6C300D799E4 /* CardStackView.swift */; };
+		381192691E73B79900D799E4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381192681E73B79900D799E4 /* CardView.swift */; };
+		3811926B1E73D95200D799E4 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3811926A1E73D95200D799E4 /* UIView+Nib.swift */; };
+		388DAF451E7425FE004FAC9C /* MyCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388DAF441E7425FE004FAC9C /* MyCard.xib */; };
+		388DAF471E742666004FAC9C /* MyCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388DAF461E742666004FAC9C /* MyCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		381192571E73B5CA00D799E4 /* CardStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3811925B1E73B5CA00D799E4 /* CardStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackTests.swift; sourceTree = "<group>"; };
 		3811925D1E73B5CA00D799E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381192661E73B6C300D799E4 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		381192681E73B79900D799E4 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3811926A1E73D95200D799E4 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		388DAF441E7425FE004FAC9C /* MyCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCard.xib; sourceTree = "<group>"; };
+		388DAF461E742666004FAC9C /* MyCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,11 @@
 				3811924D1E73B5CA00D799E4 /* Assets.xcassets */,
 				3811924F1E73B5CA00D799E4 /* LaunchScreen.storyboard */,
 				381192521E73B5CA00D799E4 /* Info.plist */,
+				381192661E73B6C300D799E4 /* CardStackView.swift */,
+				381192681E73B79900D799E4 /* CardView.swift */,
+				3811926A1E73D95200D799E4 /* UIView+Nib.swift */,
+				388DAF441E7425FE004FAC9C /* MyCard.xib */,
+				388DAF461E742666004FAC9C /* MyCard.swift */,
 			);
 			path = CardStack;
 			sourceTree = "<group>";
@@ -184,6 +199,7 @@
 				381192511E73B5CA00D799E4 /* LaunchScreen.storyboard in Resources */,
 				3811924E1E73B5CA00D799E4 /* Assets.xcassets in Resources */,
 				3811924C1E73B5CA00D799E4 /* Main.storyboard in Resources */,
+				388DAF451E7425FE004FAC9C /* MyCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381192671E73B6C300D799E4 /* CardStackView.swift in Sources */,
 				381192491E73B5CA00D799E4 /* ViewController.swift in Sources */,
+				381192691E73B79900D799E4 /* CardView.swift in Sources */,
+				3811926B1E73D95200D799E4 /* UIView+Nib.swift in Sources */,
 				381192471E73B5CA00D799E4 /* AppDelegate.swift in Sources */,
+				388DAF471E742666004FAC9C /* MyCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +430,7 @@
 				381192621E73B5CA00D799E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		381192631E73B5CA00D799E4 /* Build configuration list for PBXNativeTarget "CardStackTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +439,7 @@
 				381192651E73B5CA00D799E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
