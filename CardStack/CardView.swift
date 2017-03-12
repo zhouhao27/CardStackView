@@ -68,7 +68,6 @@ class CardView: UIView {
     func drag(gesture: UIPanGestureRecognizer) {
         
         let translation = gesture.translation(in: self)
-        print(translation)
 
         if gesture.state == .ended {
             
@@ -76,18 +75,18 @@ class CardView: UIView {
                 delegate?.shouldRemoveCardView(self)
                 
                 // TODO:  better animation
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.center = CGPoint(x:-1000, y: 0)
-                }, completion: { (complete) in
-                    self.removeFromSuperview()
-                })
+//                UIView.animate(withDuration: 0.5, animations: {
+//                    self.center = CGPoint(x:-1000, y: 0)
+//                }, completion: { (complete) in
+//                    self.removeFromSuperview()
+//                })
+                
+                self.removeFromSuperview()
             } else {
                 // return back to original position
                 UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
                     self.center = self.originCenter
-                    
                 }, completion: { (complete) in
-                    
                 })
             }
             return

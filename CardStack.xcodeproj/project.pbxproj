@@ -46,6 +46,7 @@
 		3811926A1E73D95200D799E4 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		388DAF441E7425FE004FAC9C /* MyCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCard.xib; sourceTree = "<group>"; };
 		388DAF461E742666004FAC9C /* MyCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCard.swift; sourceTree = "<group>"; };
+		38B08AAC1E74E9610036FEC4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		3811923A1E73B5CA00D799E4 = {
 			isa = PBXGroup;
 			children = (
+				38B08AAC1E74E9610036FEC4 /* README.md */,
 				381192451E73B5CA00D799E4 /* CardStack */,
 				3811925A1E73B5CA00D799E4 /* CardStackTests */,
 				381192441E73B5CA00D799E4 /* Products */,

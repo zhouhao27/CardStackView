@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CardStackViewDataSource: class {
-    func nextCard(in: CardStackView) -> CardView
+    func nextCard(in: CardStackView) -> CardView?
     func cardStackView(_ cardStackView: CardStackView, cardAt index: Int) -> CardView
     func numOfCardInStackView(_ cardStackView: CardStackView) -> Int
 }
@@ -66,7 +66,8 @@ class CardStackView: UIView, CardViewDelegate {
     }
     
     func reloadData() {
-        subviews.forEach { $0.removeFromSuperview() }
+        
+        subviews.filter { $0.isKind(of: CardView.self) }.forEach { $0.removeFromSuperview() }
         
         if let dataSource = dataSource {
             let total = dataSource.numOfCardInStackView(self)
@@ -90,6 +91,7 @@ class CardStackView: UIView, CardViewDelegate {
     // MARK: - CardViewDelegate
     
     func shouldRemoveCardView(_ cardView: CardView) {
+        
         if let nextCard = dataSource?.nextCard(in: self) {
             nextCard.delegate = self
             // always in last
@@ -102,12 +104,24 @@ class CardStackView: UIView, CardViewDelegate {
         
         // setup cards frame
         var index = 0
-        for cardView in subviews.reversed() {
-            if cardView.isKind(of: CardView.self) {
-                cardView.frame = rectAt(index: index)
+        let allCardViews = subviews.filter { $0.isKind(of: CardView.self) }
+        for cardView in allCardViews.reversed() {
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 20, options: .curveEaseInOut, animations: {
+                cardView.frame = self.rectAt(index: index)
                 index += 1
-            }
+            }, completion: { (complete) in
+            })
         }
+        
+//        for cardView in subviews.reversed() {
+//            if cardView.isKind(of: CardView.self) {
+//                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 20, options: .curveEaseInOut, animations: {
+//                    cardView.frame = self.rectAt(index: index)
+//                    index += 1
+//                }, completion: { (complete) in                    
+//                })
+//            }
+//        }
         
     }
     
