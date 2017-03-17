@@ -23,18 +23,8 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48E-7r-evq" customClass="CardStackView" customModule="CardStack" customModuleProvider="target">
                                 <rect key="frame" x="10" y="68" width="355" height="240"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gc-1U-5Iu">
-                                        <rect key="frame" x="144" y="110" width="66" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.3411764706" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="1gc-1U-5Iu" firstAttribute="centerX" secondItem="48E-7r-evq" secondAttribute="centerX" id="9Yp-Nn-bVN"/>
-                                    <constraint firstItem="1gc-1U-5Iu" firstAttribute="centerY" secondItem="48E-7r-evq" secondAttribute="centerY" id="FhQ-2N-f4X"/>
                                     <constraint firstAttribute="height" constant="240" id="SdY-hr-vd1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

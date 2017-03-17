@@ -91,7 +91,6 @@ class CardStackView: UIView, CardViewDelegate {
     // MARK: - CardViewDelegate
     
     func shouldRemoveCardView(_ cardView: CardView) {
-        
         if let nextCard = dataSource?.nextCard(in: self) {
             nextCard.delegate = self
             // always in last
@@ -101,7 +100,6 @@ class CardStackView: UIView, CardViewDelegate {
     
     // MARK: - Override
     override func layoutSubviews() {
-        
         // setup cards frame
         var index = 0
         let allCardViews = subviews.filter { $0.isKind(of: CardView.self) }
@@ -112,17 +110,6 @@ class CardStackView: UIView, CardViewDelegate {
             }, completion: { (complete) in
             })
         }
-        
-//        for cardView in subviews.reversed() {
-//            if cardView.isKind(of: CardView.self) {
-//                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 20, options: .curveEaseInOut, animations: {
-//                    cardView.frame = self.rectAt(index: index)
-//                    index += 1
-//                }, completion: { (complete) in                    
-//                })
-//            }
-//        }
-        
     }
     
     // MARK: - Private methods

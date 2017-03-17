@@ -67,6 +67,10 @@ class CardView: UIView {
 
     func drag(gesture: UIPanGestureRecognizer) {
         
+        guard isTopMost() else {
+            return
+        }
+        
         let translation = gesture.translation(in: self)
 
         if gesture.state == .ended {
@@ -93,6 +97,11 @@ class CardView: UIView {
         }
         
         self.center = CGPoint(x: originCenter.x + translation.x, y: originCenter.y + translation.y)
+    }
+    
+    //MARK: - Private
+    func isTopMost() -> Bool {
+        return self.superview?.subviews.last == self
     }
     
 }
